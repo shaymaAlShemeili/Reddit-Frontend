@@ -1,0 +1,32 @@
+<!-- Display Posts -->
+<div class="post-container">
+  <div class="row post" *ngFor="let post of posts">
+      <div class="col-md-12 post-content">
+          <div class="post-header">
+              <span class="subreddit-info">
+                  Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a>
+              </span>
+          </div>
+          <div class="post-title">
+              <a class="title" href="{{post.url}}">{{post.title}}</a>
+          </div>
+          <div class="post-description">
+            <p class="post-text" [innerHtml]="post.content | slice:0:150"></p>
+            <span *ngIf="post.content.length > 150">...</span>
+          </div>
+          <div class="post-footer">
+                <a class="btnComments" role="button">
+                  <fa-icon [icon]="faComments" class="comment-icon"></fa-icon>
+                  Comments({{post.commentCount || 0}})
+                </a>
+              
+                <div class="post-buttons">
+                    <button class="editButton" *ngIf="post.userName.toLowerCase() === loggedInUserName?.toLowerCase()" (click)="editPost(post.id)">Edit</button>
+                    <button class="deleteButton" *ngIf="post.userName.toLowerCase() === loggedInUserName?.toLowerCase()" (click)="deletePost(post.id)">Delete</button>
+                    <button class="readPost" (click)="goToPost(post.id)">Read Post</button>
+                </div>
+            
+          </div>
+      </div>
+  </div>
+</div>

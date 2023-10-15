@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <hr />
+    <div class="edit-post-container col-md-12">
+      <form class="post-form" [formGroup]="editPostForm" (ngSubmit)="editPost()">
+        <div class="form-group">
+          <div class="edit-post-heading">Edit Post</div>
+          <hr />
+          <input type="text" formControlName="title" class="form-control" style="margin-top: 5px" placeholder="Title">
+          <textarea formControlName="Content" rows="10" cols="50" class="form-control" style="margin-top: 5px"></textarea>
+          <span>
+            <div style="margin-top: 5px" class="float-right">
+              <button class="btnEditPost">Update</button>
+            </div>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

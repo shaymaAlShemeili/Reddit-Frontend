@@ -1,0 +1,50 @@
+<div class="container reddit-container">
+  <div class="row">
+    <div class="col-md-3 sidebar-section">
+      <app-side-bar></app-side-bar>
+      <app-subreddit-side-bar></app-subreddit-side-bar>
+    </div>
+    <div class="col-md-9 main-content-section">
+      <!-- Post -->
+      <div class="post">
+        <div class="post-header">
+          Posted by <a class="username" href="#">{{post.userName}}</a>
+        </div>
+        <div class="post-title">{{post.title}}</div>
+        <p class="post-text" [innerHtml]="post.content"></p>
+        <div class="post-comment" *ngIf="authService.isLoggedIn()">
+          <form [formGroup]="commentForm" (ngSubmit)="postComment()">
+            <textarea class="form-control" [formControlName]="'text'" placeholder="Your Thoughts?"></textarea>
+            <button type="submit" class="comment-button">Comment</button>
+          </form>
+        </div>
+        <div *ngIf="!authService.isLoggedIn()" class="login-reminder">
+          <p>You need to <a routerLink="/login">log in</a> to post comments.</p>
+        </div>
+      </div>
+      <!-- Comments Section -->
+      <div class="comments-section">
+        <div class="comment" *ngFor="let comment of comments">
+            <div class="comment-header">
+                <a class="username" routerLink="#">{{comment.userName}}</a>
+            </div>
+            
+            <!-- Display comment -->
+            <div class="comment-content" *ngIf="!editMode[comment.id]">{{comment.content}}</div>
+            
+            <!-- Editable comment -->
+            <div *ngIf="editMode[comment.id]">
+                <textarea [(ngModel)]="comment.content" class="form-control"></textarea>
+
+                <button (click)="saveEdit(comment.id)">Save</button>
+            </div>
+    
+            <div class="comment-actions" *ngIf="comment.userName.toLowerCase() === loggedInUserName?.toLowerCase()">
+                <button class="edit-btn" (click)="startEdit(comment.id)">Edit</button>
+                <button class="delete-btn" (click)="deleteComment(comment.id)">Delete</button>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

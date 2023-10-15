@@ -1,0 +1,134 @@
+/* Main Container Styling */
+.reddit-container {
+  max-width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar-section {
+  padding: 10px;
+  background-color: #F5F5F5;
+  border-right: 1px solid #E5E5E5;
+}
+
+/* Main Content Styling */
+.main-content-section {
+  padding: 15px;
+}
+
+/* Post Styling */
+.post {
+  background-color: #FFF;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.post-header {
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.post-text {
+  color: #444;
+  font-size: 16px;
+}
+
+/* Comment Form */
+.post-comment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.comment-button {
+  display: block;
+  background-color: #FF4500;
+  color: #FFF;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-button:hover {
+  background-color: #FF5722;
+}
+
+.login-reminder {
+  margin-top: 15px;
+  color: #FF4500;
+}
+
+/* Comments Styling */
+.comments-section .comment {
+  padding: 15px;
+  border-bottom: 1px solid #E5E5E5;
+  background-color: #FFF;
+}
+
+.comment-header {
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.comment-content {
+  color: #333;
+  font-size: 16px;
+}
+
+.username {
+  color: #FF4500;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.username:hover {
+  color: #FF5722;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* space between buttons */
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-btn {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049; 
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #da190b; 
+}

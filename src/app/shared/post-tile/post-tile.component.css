@@ -1,0 +1,142 @@
+.post-container {
+    background-color: #f7f9fc;
+}
+
+.post {
+    border: 1px solid #d3d3d3;
+    margin: 20px 0;
+    /* padding: 20px; */
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-header,
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnComments {
+    background: transparent;
+    border: none;
+    color: #878A8C;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btnComments:hover {
+    color: #333;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.post-title .title {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.post-title .title:hover {
+    color: #0079d3;
+}
+
+.username {
+    text-decoration: none;
+    color: #FF5733;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.username:hover {
+    color: #C43D00;  
+}
+
+.comment-icon {
+    color: #FF5733;
+    margin-right: 5px;
+}
+
+.post-description {
+    margin-bottom: 20px;
+    color: #7F7F7F;
+}
+
+.readPost {
+    background-color: #0079d3;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    
+}
+
+.readPost:hover {
+    background-color: #0056b3;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.editButton {
+    background-color: #FFA500; /* Orange */
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; 
+}
+
+.editButton:hover {
+    background-color: #FF8C00; /* Darker Orange */
+}
+
+.deleteButton {
+    background-color: #FF4500; /* Red-Orange */
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; 
+}
+
+.deleteButton:hover {
+    background-color: #FF6347; /* Tomato */
+}
+
+.readPost {
+    background-color: #0079d3;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;  
+}
+
+.readPost:hover {
+    background-color: #0056b3;
+}
